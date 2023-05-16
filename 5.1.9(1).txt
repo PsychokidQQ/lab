@@ -6,7 +6,7 @@ class Person
 public:
     string name;
     int age;
-    string occupation; // new member
+    string occupation;
 };
 
 void print(Person* person)
@@ -19,7 +19,7 @@ int main()
     Person person;
     person.name = "Harry";
     person.age = 23;
-    person.occupation = "programmer"; // set the new member
+    person.occupation = "programmer";
     cout << "Meet " << person.name << endl;
     print(&person);
 
