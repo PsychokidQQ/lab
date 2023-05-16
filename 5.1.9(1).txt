@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Person
+{
+public:
+    string name;
+    int age;
+    string occupation; // new member
+};
+
+void print(Person* person)
+{
+    cout << person->name << " is " << person->age << " years old and works as a " << person->occupation << endl;
+}
+
+int main()
+{
+    Person person;
+    person.name = "Harry";
+    person.age = 23;
+    person.occupation = "programmer"; // set the new member
+    cout << "Meet " << person.name << endl;
+    print(&person);
+
+    return 0;
+}

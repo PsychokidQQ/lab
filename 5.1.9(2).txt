@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Square {
+private:
+    int side;
+    int area;
+public:
+    Square(int s) : side(s), area(s * s) {}
+
+    void set_side(int s) {
+        if (s >= 0) {
+            side = s;
+            area = s * s;
+        }
+    }
+
+    void print() const {
+        cout << "Square with side " << side << " has area " << area << endl;
+    }
+};
+
+int main() {
+    Square sq(5);
+    sq.print(); // should print "Square with side 5 has area 25"
+    sq.set_side(7);
+    sq.print(); // should print "Square with side 7 has area 49"
+    sq.set_side(-3);
+    sq.print(); // should print "Square with side 7 has area 49" (no change)
+    return 0;
+}
